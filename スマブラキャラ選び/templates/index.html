@@ -1,0 +1,28 @@
+<!doctype html>
+<main>
+    <h1 class="content_title">スマメイター</h1>
+    <div class="content">
+        <h1>戦い方を入力してください</h1>
+        <form action="/" method="POST"><!-- GETを指定すると、入力情報がURLに表示される -->
+            <p>
+                <label><span>軸になる技は？どんな立ち回り？</span>
+                    <input type="text" name="style" placeholder="コンボ、固い立ち回り、掴みなど">
+                </label>
+            </p>
+            <div class="calc_btn">
+                <input type="submit" value='実行する'>
+            </div>
+        </form>
+    </div>
+
+    <div class="box">
+        {% if fighter1 %}
+            <p>あなたの入力は「{{style}}」</p> 
+            <p>該当キャラは</p>
+            <h2 class="result"> {{fighter1}}    {{fighter2}}    {{fighter3}}    {{fighter4}}    {{fighter5}}</h2>
+        {% else %}
+            <h2 class="result"></h2>
+        {% endif %}
+    </div>
+    </main>
+    
