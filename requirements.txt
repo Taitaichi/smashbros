@@ -5,4 +5,4 @@ gensim==4.3.0
 numpy==1.24.2
 pandas==1.5.3
 requests==2.28.2
-mecab-python3
+mecab-python3==0.996.5
